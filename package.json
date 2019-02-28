@@ -1,0 +1,35 @@
+{
+  "name": "moleculer-cls",
+  "version": "1.0.0",
+  "description": "Hooked Continuation-Local Storage for  Moleculer",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cupsadarius/moleculer-cls.git"
+  },
+  "keywords": [
+    "moleculer",
+    "Continuation-Local Storage",
+    "cls",
+    "context"
+  ],
+  "author": "Darius Cupsa <cupsadarius@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cupsadarius/moleculer-cls/issues"
+  },
+  "homepage": "https://github.com/cupsadarius/moleculer-cls#readme",
+  "peerDependencies": {
+    "moleculer": "^0.13.x"
+  },
+  "engines": {
+    "node": "9"
+  },
+  "dependencies": {
+    "cls-hooked": "^4.2.2",
+    "uuid": "^3.3.2"
+  }
+}
