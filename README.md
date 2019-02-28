@@ -36,10 +36,7 @@ module.exports = {
   actions: {
     hello: {
       params: {
-        properties: {
-          "name": {type: "string"}
-        },
-        required: ["name"]
+        "name": "string"
       },
       handler: async (ctx) => {
         context.set('request_id', ctx.requestID);
