@@ -1,16 +1,15 @@
-const context = require('cls-hooked');
-const uuid = require('uuid').v4;
+const context = require("cls-hooked");
+const uuid = require("uuid").v4;
 
-const  namespace = context.createNamespace(uuid());
+const namespace = context.createNamespace(uuid());
 
 const middleware = (handler) => {
   return async (ctx) => {
-    await new Promise((resolve) => namespace.runPromise(resolve));
-    return await handler(ctx);
+    return namespace.runPromise(async () => handler(ctx));
   };
 };
 
-const set = (key,  value) => {
+const set = (key, value) => {
   if (namespace && namespace.active) {
     namespace.set(key, value);
   }
@@ -26,5 +25,6 @@ module.exports = {
   namespace,
   set,
   get,
-  middleware
+  middleware,
 };
+
