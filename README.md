@@ -2,9 +2,9 @@
 
 Add support for continuation local storage in moleculer action handlers.
 
-## Current Version (v1.0.0)
+## Current Version (v1.2.0)
 
-- support [moleculer ^0.13.x](https://github.com/moleculerjs/moleculer)
+- support [moleculer ^0.14.x](https://github.com/moleculerjs/moleculer)
 - using [cls-hooked ^4.2.x](https://github.com/jeff-lewis/cls-hooked)
 
 ## Install
