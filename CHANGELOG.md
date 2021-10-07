@@ -1,5 +1,8 @@
 # Change Log
 
+## v1.3.0
+
+- allow newer nodejs versions
 
 ## v1.2.0
 
