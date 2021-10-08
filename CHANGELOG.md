@@ -1,5 +1,9 @@
 # Change Log
 
+## v1.4.0
+
+- migrate from deprecated shorthand syntax for middleware
+
 ## v1.3.0
 
 - allow newer nodejs versions
