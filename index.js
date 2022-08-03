@@ -1,14 +1,15 @@
 const { AsyncLocalStorage } = require('node:async_hooks');
+
 const storage = new AsyncLocalStorage();
 
 const middleware = {
-  localAction: function (next) {
+  localAction(next) {
     return (ctx) => {
       return storage.run(new Map(), async () => {
-        return next(ctx)
-      }); 
+        return next(ctx);
+      });
     };
-  },
+  }
 };
 
 const set = (key, value) => {
@@ -16,7 +17,7 @@ const set = (key, value) => {
   if (!store) {
     return undefined;
   }
-  store.set(key, value);
+  return store.set(key, value);
 };
 
 const get = (key) => {
@@ -31,6 +32,6 @@ module.exports = {
   namespace: storage,
   set,
   get,
-  middleware,
+  middleware
 };
 
