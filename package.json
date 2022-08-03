@@ -1,7 +1,7 @@
 {
   "name": "moleculer-cls",
-  "version": "1.4.0",
-  "description": "Hooked Continuation-Local Storage for  Moleculer",
+  "version": "2.0.0",
+  "description": "Async Local Storage for  Moleculer",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -13,6 +13,7 @@
   "keywords": [
     "moleculer",
     "Continuation-Local Storage",
+    "Async Local Storage",
     "cls",
     "context"
   ],
@@ -26,10 +27,6 @@
     "moleculer": "^0.14.x"
   },
   "engines": {
-    "node": ">=9"
-  },
-  "dependencies": {
-    "cls-hooked": "^4.2.2",
-    "uuid": "^3.4.0"
+    "node": ">=13"
   }
 }

@@ -1,31 +1,36 @@
-const context = require("cls-hooked");
-const uuid = require("uuid").v4;
-
-const namespace = context.createNamespace(uuid());
+const { AsyncLocalStorage } = require('node:async_hooks');
+const storage = new AsyncLocalStorage();
 
 const middleware = {
   localAction: function (next) {
-    return async (ctx) => {
-      return namespace.runPromise(async () => next(ctx));
+    return (ctx) => {
+      return storage.run(new Map(), async () => {
+        return next(ctx)
+      }); 
     };
   },
 };
 
 const set = (key, value) => {
-  if (namespace && namespace.active) {
-    namespace.set(key, value);
+  const store = storage.getStore();
+  if (!store) {
+    return undefined;
   }
+  store.set(key, value);
 };
 
 const get = (key) => {
-  if (namespace && namespace.active) {
-    return namespace.get(key);
+  const store = storage.getStore();
+  if (!store) {
+    return undefined;
   }
+  return store.get(key);
 };
 
 module.exports = {
-  namespace,
+  namespace: storage,
   set,
   get,
   middleware,
 };
+

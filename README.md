@@ -1,12 +1,11 @@
-# Hooked Continuation-Local Storage for Moleculer
+# Async Local Storage for Moleculer
 
-Add support for continuation local storage in moleculer action handlers.
+Add support for async local storage in moleculer action handlers.
 
-## Current Version (v1.4.0)
+## Current Version (v2.0.0)
 
 - support [moleculer ^0.14.x](https://github.com/moleculerjs/moleculer)
-- using [cls-hooked ^4.2.x](https://github.com/jeff-lewis/cls-hooked)
-- accept nodejs: >=9
+- accept nodejs: >=13
 
 ## Install
 
