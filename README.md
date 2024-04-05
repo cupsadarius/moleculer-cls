@@ -2,7 +2,7 @@
 
 Add support for continuation local storage in moleculer action handlers.
 
-## Current Version (v1.4.0)
+## Current Version (v1.4.1)
 
 - support [moleculer ^0.14.x](https://github.com/moleculerjs/moleculer)
 - using [cls-hooked ^4.2.x](https://github.com/jeff-lewis/cls-hooked)
@@ -41,7 +41,7 @@ module.exports = {
       },
       handler: async (ctx) => {
         context.set('request_id', ctx.requestID);
-        
+
         return await process(ctx.params);
       }
     }
