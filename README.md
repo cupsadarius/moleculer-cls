@@ -2,10 +2,10 @@
 
 Add support for async local storage in moleculer action handlers.
 
-## Current Version (v2.0.0)
+## Current Version (v2.1.0)
 
 - support [moleculer ^0.14.x](https://github.com/moleculerjs/moleculer)
-- accept nodejs: >=13
+- accept nodejs: >=18
 
 ## Install
 
@@ -40,7 +40,7 @@ module.exports = {
       },
       handler: async (ctx) => {
         context.set('request_id', ctx.requestID);
-        
+
         return await process(ctx.params);
       }
     }
