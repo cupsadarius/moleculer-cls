@@ -1,6 +1,6 @@
 {
   "name": "moleculer-cls",
-  "version": "1.4.0",
+  "version": "1.4.1",
   "description": "Hooked Continuation-Local Storage for  Moleculer",
   "main": "index.js",
   "scripts": {
