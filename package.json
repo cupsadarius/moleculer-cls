@@ -27,6 +27,6 @@
     "moleculer": "^0.14.x"
   },
   "engines": {
-    "node": ">=13"
+    "node": ">=18"
   }
 }
